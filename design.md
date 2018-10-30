@@ -1,8 +1,8 @@
-* Homework
+# Homework
 
 Modelling BBC web site
 
-** Relationships
+## Relationships
 
 A section can have many subsections
 [Section] 1 <---> 1..Many [Subsection]
@@ -14,14 +14,14 @@ An article has one or more authors. An author can appear as a byline on many art
 [Article] Many <---> Many [Author]
 
 
-** Sections
+## Sections
 
 A section of the news (top-level) e.g. Business, UK, World, Science, etc
 
 - section_id : serial
 - name (e.g. UK, Business, Health, Science) : string
 
-** Subsections
+## Subsections
 
 A sub-section of a second (e.g. under UK, Scotland
 "England" and "Wales" are subsections. Under Business,
@@ -31,7 +31,7 @@ subsections are "Your Money" and "Markets")
 - section_id: Foreign Key sections(section_id)
 - Name : string e.g. (Under UK, Scotland, NI etc)
 
-** Articles
+## Articles
 
 We assume articles only get stored in one subsections
 In reality this is probably a 1:Many relationship with
@@ -43,14 +43,14 @@ subsection.
 - content: string
 - subsection: foreign key subsections(subsection_id)
 
-** Authors
+## Authors
 
 An individual writer (e.g. freelance, staff)
 
 - author_id : serial primary_key
 - name : string
 
-** Authorship
+## Authorship
 
 handles Many:Many between Authors and Articles
 
